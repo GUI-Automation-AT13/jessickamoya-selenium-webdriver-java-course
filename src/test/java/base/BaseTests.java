@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import pages.HomePage;
-
 import java.util.List;
 
 public class BaseTests {
@@ -22,10 +21,6 @@ public class BaseTests {
         driver.get("https://the-internet.herokuapp.com/");
 
         homePage = new HomePage(driver);
-
-        //Optional Exercise Chapter 3
-//        optionalExerciseChapter3(driver);
-        //Optional Exercise Chapter 3
     }
 
     @AfterClass
@@ -33,6 +28,7 @@ public class BaseTests {
         driver.quit();
     }
 
+    //Optional Exercise Chapter 3
     public static void optionalExerciseChapter3(WebDriver driver) {
         WebElement shiftingContentLink = driver.findElement(By.linkText("Shifting Content"));
         shiftingContentLink.click();
